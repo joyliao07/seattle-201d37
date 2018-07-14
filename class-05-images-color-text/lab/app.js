@@ -39,7 +39,7 @@ function multiply(a, b) {
   return arr;
 }
 
-multiple(1, 2);
+multiply(1, 2);
 
 
 
@@ -71,9 +71,23 @@ multiple(1, 2);
 
 // Write your code here
 
-function sumAndMultiply(a, b, c) { //eslint-disable-line
+function sumAndMultiply(a, b, c) { 
+  var arr = [];
+  var sum = a+b+c;
+  arr.push(sum);
+  var p = a*b*c;
+  arr.push(p);
+  var msg1 = 'The sum of ' + a + ' and ' + b + ' and ' + c + ' is ' + sum + '.';
+  arr.push(msg1);
+  var msg2 = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + p + '.';
+  arr.push(msg2);
+  return arr;
+}
 
-// }
+sumAndMultiply(1, 2, 3);
+
+
+// }6-*
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
 // testSumAndMultiply(4,7,5);
@@ -133,7 +147,7 @@ Write a function called multiplyAnyArray() that takes an array of numbers of any
 
 "The numbers 1,2,3,4,5 have a product of 120."
 
-IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To do multiplication, use your multiply() function that you've already created. You're going to have to be resourceful to figure out how to do this.
+IMPORTAkNT DETAIL: You may not use the arithmetic operator * in this function. To do multiplication, use your multiply() function that you've already created. You're going to have to be resourceful to figure out how to do this.
 
 This function should be dynamic, accepting an array of any length.
 
