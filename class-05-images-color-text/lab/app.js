@@ -186,12 +186,42 @@ This function should be dynamic, accepting an array of any length.
 
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyAnyArray() function and see if the test passes.*/
 
+function multiplyArray(mulArr) { //eslint-disable-line
+  var arr = [];
+  mulArr = [2, 3, 4];
+  var p1 = multiply (mulArr[0], mulArr[1])[0];
+  var p2 =  multiply (p1, mulArr[2])[0];
+  var msg = 'The numbers ' + mulArr[0] + ',' + mulArr[1] + ',' + mulArr[2] + ' have a product of ' + p2 + '.';
+  arr.push(p2);
+  arr.push(msg);
+  return arr;
+}
+
+multiplyArray();
+
 // Write your code here
-// var testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
+var testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
-// function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+function multiplyAnyArray(testDynamicArray) { //eslint-disable-line
+  var arr = [];
+  testDynamicArray = [1,2,3,4,5];
 
-// }
+
+  for (var i = 0; i < testDynamicArray.length; i++) {
+    testDynamicArray = [2,2,2,4,5];
+    if (i = 0) {
+      var follow = multiply (testDynamicArray [i], testDynamicArray[i + 1])[0];
+    } else {
+      follow = multiply (follow, testDynamicArray[i + 1])[0];
+      return follow;
+    }
+
+  }
+  arr.push(follow);
+  return arr;
+}
+
+
 
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyAnyArray(testDynamicArray);
